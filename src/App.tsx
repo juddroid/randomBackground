@@ -1,15 +1,8 @@
-import { useState } from "react";
 import "./App.css";
+import RandomBackground from "./lib/RandomBackground";
 
-function RandomBackground() {
-  const [color, setColor] = useState<string | undefined>();
-
-  const handleBackgroundColor = () => {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    setColor(() => `#${randomColor}`);
-  };
-
-  return <div className="background" onClick={handleBackgroundColor} style={{ background: color }} />;
+function App() {
+  return <RandomBackground />;
 }
 
-export default RandomBackground;
+export default App;
