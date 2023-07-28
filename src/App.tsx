@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
+function RandomBackground() {
   const [color, setColor] = useState<string | undefined>();
 
   const handleBackgroundColor = () => {
@@ -12,4 +12,4 @@ function App() {
   return <div className="background" onClick={handleBackgroundColor} style={{ background: color }} />;
 }
 
-export default App;
+export default RandomBackground;
